@@ -1,0 +1,39 @@
+{
+  "MISTERIOS": {
+    "categorias": {
+      "Electrico": {
+        "conceptos": {
+          "01_CABLE": ["PB", "PS1", "PS2", "PS3"],
+          "02_TUBERIA": ["PB", "PS1"],
+          "03_CONTACTOS": ["PB", "PS1", "PS2"]
+        }
+      },
+      "Plomeria": {
+        "conceptos": {
+          "04_TAZA_WC": ["PB", "PS1", "PS2", "PS3"],
+          "05_MONOMANDO": ["COCINA", "PB"],
+          "06_LAVABO": ["PB", "PS1"]
+        }
+      }
+    }
+  },
+
+  "HR 1 OCTUBRE": {
+    "categorias": {
+      "Herreria": {
+        "conceptos": {
+          "010_CAMBIO_CHAPA": ["PB", "PS1"],
+          "011_CAMBIO_PUERTA": ["PB"],
+          "012_VENTANA": ["PS1", "PS2"]
+        }
+      },
+      "Albanileria": {
+        "conceptos": {
+          "015_DEMOLICION_CONCRETO": ["PB", "PS1"],
+          "016_CONSTRUCCION_FIRME": ["PB"],
+          "017_TAPAS_REJILLA": ["PB", "PS1", "PS2"]
+        }
+      }
+    }
+  }
+}
