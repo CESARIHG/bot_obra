@@ -1,5 +1,6 @@
 import os
-TOKEN = os.getenv("TOKEN")
+
+TOKEN = os.getenv("TELEGRAM_TOKEN")
 # ===== CONEXIÓN MYSQL =====
 import mysql.connector
 
