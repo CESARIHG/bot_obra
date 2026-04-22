@@ -18,6 +18,25 @@
     }
   },
 
+    "CHURUBUSCO": {
+    "categorias": {
+      "Electrico": {
+        "conceptos": {
+          "01_CABLE": ["PB", "PS1", "PS2", "PS3"],
+          "02_TUBERIA": ["PB", "PS1"],
+          "03_CONTACTOS": ["PB", "PS1", "PS2"]
+        }
+      },
+      "Plomeria": {
+        "conceptos": {
+          "04_TAZA_WC": ["PB", "PS1", "PS2", "PS3"],
+          "05_MONOMANDO": ["COCINA", "PS2", "PB"],
+          "06_LAVABO": ["PB", "PS1"]
+        }
+      }
+    }
+  },
+
   "HR 1 OCTUBRE": {
     "categorias": {
       "Herreria": {
