@@ -5,6 +5,7 @@ from datetime import datetime
 import unicodedata
 import re
 import mysql.connector
+import asyncio  # ✅ agregado
 
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, MessageHandler, filters, ContextTypes
@@ -30,7 +31,7 @@ with open("config.json", "r", encoding="utf-8") as f:
 
 user_data_temp = {}
 
-# ===== RUTA TEMPORAL (IMPORTANTE EN AZURE) =====
+# ===== RUTA TEMPORAL =====
 RUTA_BASE = "/tmp/fotos"
 
 # ===== LIMPIEZA =====
@@ -163,11 +164,17 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     nombre = f"{data['lote']}_{data['categoria']}_{data['concepto']}_{data['area']}_{data['etapa']}_{consecutivo}.jpg"
     ruta = os.path.join(carpeta, nombre)
 
+    print("📸 Foto recibida")
+    print(f"Ruta: {ruta}")
+
     foto = update.message.photo[-1]
-    file = await context.bot.get_file(foto.file_id)
+    file = await foto.get_file()  # ✅ corregido
     await file.download_to_drive(ruta)
 
-    guardar_en_db(
+    print("✅ Imagen guardada")
+
+    await asyncio.to_thread(  # ✅ evita bloqueo por MySQL
+        guardar_en_db,
         {
             "lote": data["lote"],
             "archivo": nombre,
