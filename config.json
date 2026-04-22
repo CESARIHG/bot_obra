@@ -11,7 +11,7 @@
       "Plomeria": {
         "conceptos": {
           "04_TAZA_WC": ["PB", "PS1", "PS2", "PS3"],
-          "05_MONOMANDO": ["COCINA", "PB"],
+          "05_MONOMANDO": ["COCINA", "PS2", "PB"],
           "06_LAVABO": ["PB", "PS1"]
         }
       }
